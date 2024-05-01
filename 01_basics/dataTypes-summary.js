@@ -37,3 +37,10 @@ console.log(typeof anotherId);
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
 console.log(typeof null);  // return object
+
+
+/////////////////////////////////////////////////////////////////////////////////
+/* Stack and Heap */
+
+// stack -> primitive type (copy is made)
+// heap -> non primitive type (actual value is shared. means reference is shared)
