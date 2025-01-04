@@ -6,7 +6,7 @@ const number  = 50;
 /* Methods os string is 
  trim, substring, slice, replace, chartAt, indexOf, includes */
 
-const newname  = new String("Kumar Gupta");
+const newname  = new String("Kumar Gupta"); // in this way it makes object
 console.log(newname);
 console.log(`My nanme is : ${name}`);
 // console.log(newname[0]);
