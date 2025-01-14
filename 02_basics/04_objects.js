@@ -5,8 +5,8 @@ const source = { b: 4, c: 5 };
 const returnedTarget = Object.assign(target, source);
 console.log(returnedTarget);
 
-const obj3 = {...target, ...source}
-console.log("obj3 : ",obj3);
+const object3 = {...target, ...source}
+console.log("obj3 : ",object3);
 
 
 // const tinderUser = new Object()
