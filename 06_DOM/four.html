@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <title>DOM learning</title>
+</head>
+<body class=" bg-black">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addingLanguage(lang){
+        const li = document.createElement('li');
+        li.innerHTML = `${lang}`//here it traverse the entire tree so not good approach
+        document.querySelector('.language').appendChild(li)
+    }
+    addingLanguage('HTML');
+    addingLanguage('CSS')
+
+
+    //optmize way
+
+    function add_lang(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    add_lang('python')
+
+
+
+     //Edit
+     const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    //secondLang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
